@@ -1,6 +1,23 @@
-# How to build
+# How to build and test the contracts
 
-Here to fork CORE? I wish you the best of luck. Please add build steps in your fork and open a PR. It's the least you can do, right?
+To build and test the contracts,  please do the following,
+
+1. Make sure you have node.js and yarn installed in your system.
+2. Then install truffle globally in your system via the command yarn global add truffle.
+3. Navigate to the root of this project and install the required node dependencies through the command yarn install
+4. Replace the infuraKey variable in truffle-config.js with your own infura key.
+5. Finally, connect a ledger wallet via usb and fund the ethereum account associated with the device with some test kovan ETH and then run the command 
+```js
+ yarn build && yarn deploy && truffle test --network kovan
+```
+
+to compile & deploy the contracts to kovan and also run the tests to verify its functionality.
+
+# Run the UI
+
+The UI is already built and connected to the [live contracts](#live-contracts) on the mainnet. 
+
+So to run it locally, simply deploy a static python server via the command `python -m SimpleHTTPServer` and then navigaete to `http://localhost:8000/` to interact with it.
 
 # Introducing CORE
 

@@ -1,5 +1,7 @@
 const LedgerWalletProvider = require('truffle-ledger-provider');
 
+const INFURA_APIKEY = "";
+
 console.log(INFURA_APIKEY);
 
 const kovanLedgerOptions = {
